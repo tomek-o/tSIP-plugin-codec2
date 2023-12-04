@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="codec2" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/codec2" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option host_application="../tSIP/tSIP/Debug_Build/tSIP.exe" />
+				<Option run_host_application_in_terminal="0" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-fshort-enums" />
+					<Add option="-DBUILD_DLL" />
+					<Add directory="jsoncpp/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-Wl,--add-stdcall-alias" />
+					<Add library="user32" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/codec2" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Os" />
+					<Add option="-Wall" />
+					<Add option="-fshort-enums" />
+					<Add option="-DBUILD_DLL" />
+					<Add option="-DNDEBUG" />
+					<Add directory="jsoncpp/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-Wl,--add-stdcall-alias" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-std=c99" />
+			<Add option="-D__ssize_t_defined" />
+			<Add option="-DWIN32" />
+			<Add option="-D_WIN32" />
+			<Add option="-D_USE_MATH_DEFINES" />
+			<Add directory="../../../re/include" />
+			<Add directory="../../include" />
+			<Add directory="../tSIP-plugin-codec2" />
+			<Add directory="../tSIP/re/include" />
+			<Add directory="../tSIP/baresip/include" />
+			<Add directory="../tSIP/rem/include" />
+			<Add directory="jsoncpp/include" />
+		</Compiler>
+		<Linker>
+			<Add option="-static" />
+		</Linker>
+		<ExtraCommands>
+			<Add after="cmd /c copy /Y $(TARGET_OUTPUT_FILE) ..\tSIP\tSIP\Debug_Build\modules\codec2.dll" />
+			<Add after="cmd /c copy /Y $(TARGET_OUTPUT_FILE) ..\tSIP\tSIP\Release_Build\modules\codec2.dll" />
+			<Mode after="always" />
+		</ExtraCommands>
+		<Unit filename="Log.cpp" />
+		<Unit filename="Log.h" />
+		<Unit filename="Mutex.h" />
+		<Unit filename="ScopedLock.h" />
+		<Unit filename="Settings.cpp" />
+		<Unit filename="Settings.h" />
+		<Unit filename="Utils.cpp" />
+		<Unit filename="Utils.h" />
+		<Unit filename="codec2/CMakeLists.txt" />
+		<Unit filename="codec2/H2064_516_sparse_test.h" />
+		<Unit filename="codec2/HRA_112_112.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/HRA_112_112.h" />
+		<Unit filename="codec2/HRA_112_112_test.h" />
+		<Unit filename="codec2/HRA_56_56.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/HRA_56_56.h" />
+		<Unit filename="codec2/HRAa_1536_512.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/HRAa_1536_512.h" />
+		<Unit filename="codec2/HRAb_396_504.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/HRAb_396_504.h" />
+		<Unit filename="codec2/H_1024_2048_4f.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/H_1024_2048_4f.h" />
+		<Unit filename="codec2/H_128_256_5.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/H_128_256_5.h" />
+		<Unit filename="codec2/H_16200_9720.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/H_16200_9720.h" />
+		<Unit filename="codec2/H_2064_516_sparse.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/H_2064_516_sparse.h" />
+		<Unit filename="codec2/H_212_158.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/H_212_158.h" />
+		<Unit filename="codec2/H_256_512_4.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/H_256_512_4.h" />
+		<Unit filename="codec2/H_256_768_22.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/H_256_768_22.h" />
+		<Unit filename="codec2/H_4096_8192_3d.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/H_4096_8192_3d.h" />
+		<Unit filename="codec2/_kiss_fft_guts.h" />
+		<Unit filename="codec2/bpf.h" />
+		<Unit filename="codec2/bpfb.h" />
+		<Unit filename="codec2/c2file.h" />
+		<Unit filename="codec2/codebook.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/codebookd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/codebookge.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/codebookjmv.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/codebooknewamp1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/codebooknewamp1_energy.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/codebooknewamp2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/codebooknewamp2_energy.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/codec2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/codec2.h" />
+		<Unit filename="codec2/codec2_cohpsk.h" />
+		<Unit filename="codec2/codec2_fdmdv.h" />
+		<Unit filename="codec2/codec2_fft.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/codec2_fft.h" />
+		<Unit filename="codec2/codec2_fifo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/codec2_fifo.h" />
+		<Unit filename="codec2/codec2_fm.h" />
+		<Unit filename="codec2/codec2_internal.h" />
+		<Unit filename="codec2/codec2_math.h" />
+		<Unit filename="codec2/codec2_math_arm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/codec2_ofdm.h" />
+		<Unit filename="codec2/comp.h" />
+		<Unit filename="codec2/comp_prim.h" />
+		<Unit filename="codec2/debug_alloc.h" />
+		<Unit filename="codec2/defines.h" />
+		<Unit filename="codec2/dump.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/dump.h" />
+		<Unit filename="codec2/fdmdv.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/fdmdv_internal.h" />
+		<Unit filename="codec2/filter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/filter.h" />
+		<Unit filename="codec2/filter_coef.h" />
+		<Unit filename="codec2/fm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/fm_fir_coeff.h" />
+		<Unit filename="codec2/golaydectable.h" />
+		<Unit filename="codec2/golayenctable.h" />
+		<Unit filename="codec2/gp_interleaver.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/gp_interleaver.h" />
+		<Unit filename="codec2/hanning.h" />
+		<Unit filename="codec2/ht_coeff.h" />
+		<Unit filename="codec2/interldpc.h" />
+		<Unit filename="codec2/interp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/interp.h" />
+		<Unit filename="codec2/kiss_fft.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/kiss_fft.h" />
+		<Unit filename="codec2/kiss_fftr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/kiss_fftr.h" />
+		<Unit filename="codec2/ldpc_codes.h" />
+		<Unit filename="codec2/linreg.h" />
+		<Unit filename="codec2/lpc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/lpc.h" />
+		<Unit filename="codec2/lpcnet_freq.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/lpcnet_freq.h" />
+		<Unit filename="codec2/lsp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/lsp.h" />
+		<Unit filename="codec2/machdep.h" />
+		<Unit filename="codec2/mbest.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/mbest.h" />
+		<Unit filename="codec2/newamp1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/newamp1.h" />
+		<Unit filename="codec2/newamp2.h" />
+		<Unit filename="codec2/nlp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/nlp.h" />
+		<Unit filename="codec2/noise_samples.h" />
+		<Unit filename="codec2/octave.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/octave.h" />
+		<Unit filename="codec2/ofdm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/ofdm_internal.h" />
+		<Unit filename="codec2/ofdm_mode.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/optparse.h" />
+		<Unit filename="codec2/os.h" />
+		<Unit filename="codec2/pack.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/phase.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/phase.h" />
+		<Unit filename="codec2/phi0.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/phi0.h" />
+		<Unit filename="codec2/pilot_coeff.h" />
+		<Unit filename="codec2/pilots_coh.h" />
+		<Unit filename="codec2/postfilter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/postfilter.h" />
+		<Unit filename="codec2/quantise.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/quantise.h" />
+		<Unit filename="codec2/reliable_text.h" />
+		<Unit filename="codec2/rn.h" />
+		<Unit filename="codec2/rn_coh.h" />
+		<Unit filename="codec2/rxdec_coeff.h" />
+		<Unit filename="codec2/sd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/sd.h" />
+		<Unit filename="codec2/sine.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="codec2/sine.h" />
+		<Unit filename="codec2/ssbfilt_coeff.h" />
+		<Unit filename="codec2/test_bits.h" />
+		<Unit filename="codec2/test_bits_coh.h" />
+		<Unit filename="codec2/test_bits_ofdm.h" />
+		<Unit filename="codec2/varicode_table.h" />
+		<Unit filename="codec2/wval.h" />
+		<Unit filename="codec2_module.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="jsoncpp/src/lib_json/json_reader.cpp" />
+		<Unit filename="jsoncpp/src/lib_json/json_value.cpp" />
+		<Unit filename="jsoncpp/src/lib_json/json_writer.cpp" />
+		<Unit filename="main.cpp" />
+		<Unit filename="main.h" />
+		<Unit filename="resource.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="singleton.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
