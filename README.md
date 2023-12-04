@@ -1,5 +1,5 @@
 # tSIP-plugin-codec2
-[http://tomeko.net/software/SIPclient/codec2/](http://tomeko.net/software/SIPclient/codec/)
+[http://tomeko.net/software/SIPclient/codec2/](http://tomeko.net/software/SIPclient/codec2/)
 
 tSIP softphone [Codec 2](http://rowetel.com/codec2.html) plugin, based on github sources from November 2023.
 
